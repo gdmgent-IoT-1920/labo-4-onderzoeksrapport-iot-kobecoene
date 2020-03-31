@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <title>SenseHat Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  <h1>Change the color of the SenseHat</h1>
+  <form>
+    <div class="form-group">
+      <label for="color">Kleur</label>
+      <input type="text" class="form-control jscolor" id="colorPicker" value="#000">
+    </div>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="toggleMatrix">
+        <label class="form-check-label" for="toggleMatrix">Matrix on/off</label>
+    </div>
+    <button type="submit" class="btn btn-primary" id="btnChange">Submit</button>
+</form>
+
+<h1 class="evnTitle">Environment</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h2>Temperature</h2>
+      <p class="temperature">NaN</p>
+    </div>
+    <div class="col-sm">
+      <h2>Pressure</h2>
+      <p class="pressure">NaN</p>
+    </div>
+    <div class="col-sm">
+      <h2>Humidity</h2>
+      <p class="humidity">NaN</p>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+  <script src="./config/firebase.js"></script>
+  <script src="./assets/scripts/app.js"></script>
+</body>
+
+</html>
